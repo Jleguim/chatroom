@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+</head>
+
+<body>
+
+    <div id="init">
+        <h1>Chat</h1>
+        <input type="text" placeholder="Room ID" id="roomIdInput"><br>
+        <input type="button" value="Join room" id="joinRoomBtn"><br>
+        <input type="button" value="Create room" id="createRoomBtn">
+    </div>
+
+    <div id="chat" hidden="true">
+        <h1 id="matchId"></h1>
+        <h3>Share: <a id="inviteLink"></a></h3>
+        <input type="text" placeholder="Message" id="toSend">
+        <input type="button" value="Send" id="sendBtn">
+        <div id="feed"></div>
+    </div>
+
+    <script src="./chat.js"></script>
+</body>
+
+</html>

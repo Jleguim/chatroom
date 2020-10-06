@@ -1,0 +1,19 @@
+{
+  "name": "chatroom",
+  "version": "0.0.1",
+  "description": "A chatroom made using socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "keywords": [
+    "nodejs",
+    "socketio"
+  ],
+  "author": "Jleguim",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
