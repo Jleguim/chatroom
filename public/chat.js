@@ -1,5 +1,5 @@
 const socket = io()
-const url = '192.168.1.15:1337/test.html'
+const url = 'https://chatroom.jleguim.repl.co/'
 
 var username = null
 var roomID = null
