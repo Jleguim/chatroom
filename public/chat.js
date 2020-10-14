@@ -1,5 +1,4 @@
 const socket = io()
-const url = 'https://chatroom.jleguim.repl.co/'
 
 var username = null
 var roomID = null
@@ -48,7 +47,7 @@ socket.on('connect', () => {
 
         roomID = newId
         idDisplay.innerText = `Room ID: ${roomID}`
-        invite.innerText = `${url}?room=${roomID}`
+        invite.href = `/?room=${roomID}`
     }
 
     function toggleChatMode() {
