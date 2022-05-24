@@ -4,23 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="ico.png">
+
     <title>Chat</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+    <!-- Socket.io Client -->
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+        integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous">
+        </script>
+
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
 
     <div id="init">
         <h1>Chat</h1>
-        <input type="text" placeholder="Room ID" id="roomIdInput"><br>
-        <input type="button" value="Join room" id="joinRoomBtn"><br>
-        <input type="button" value="Create room" id="createRoomBtn">
+        <input type="text" placeholder="Room ID" id="roomIdInput">
+        <div id="inputBox">
+            <input type="button" value="Join room" id="joinRoomBtn">
+            <br>
+            <input type="button" value="Create room" id="createRoomBtn">
+            <br>
+            <input type="checkbox" name="isPublic" id="publicRoomCheckbox">
+            <label for="isPublic">Public</label>
+        </div>
+
+        <div>
+            <input type="button" value="Show rooms" id="showRoomsBtn">
+            <div id="roomList" hidden>
+                <li>
+                    <ul>room1</ul>
+                    <ul>room2</ul>
+                    <ul>room5</ul>
+                    <ul>room4</ul>
+                </li>
+            </div>
+            <script>
+
+            </script>
+        </div>
+
     </div>
 
-    <div id="chat" hidden="true">
+    <div id="chat" hidden>
         <h1 id="matchId"></h1>
-        <h3><a id="inviteLink" href="/">Invite users</a></h3>
+        <h3>
+            <a id="inviteLink" href="/">Invite users</a>
+        </h3>
         <input type="text" placeholder="Message" id="toSend">
         <input type="button" value="Send" id="sendBtn">
         <div id="feed"></div>

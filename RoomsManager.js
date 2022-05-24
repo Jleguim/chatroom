@@ -7,7 +7,7 @@ class RoomsManager {
     // I couldn't find the actual answer but it was found in StackOverflow :D
     _generateId() {
         var result = ''
-        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
         var charactersLength = characters.length
         for (var i = 0; i < 3; i++) {
             result += characters.charAt(Math.floor(Math.random() * charactersLength))
@@ -17,13 +17,13 @@ class RoomsManager {
     _idExists(id) {
         return this.$.has(id)
     }
-    createRoom() {
+    createRoom(isPublic = false) {
         var id = this._generateId()
         while (this._idExists(id)) {
             id = this._generateId()
         }
 
-        var room = new Room(id)
+        var room = new Room(id, isPublic)
         return room
     }
     addRoom(room) {
@@ -35,6 +35,9 @@ class RoomsManager {
     }
     has(id) {
         return this.$.has(id)
+    }
+    toArray() {
+        return Array.from(this.$.values())
     }
 }
 

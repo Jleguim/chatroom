@@ -1,0 +1,65 @@
+body {
+  background: url("https://adcc.cat/wp-content/uploads/2018/04/cielo_azul-original.jpg");
+  background-repeat: round;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: #183E8E;
+  text-align: center;
+  font-size: 100px;
+}
+
+#roomIdInput {
+  width: 500px;
+  font-size: 20px;
+  height: 50px;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  float: left;
+}
+
+#inputBox {
+  float: left;
+}
+
+input[type="button"] {
+  font-size: 20px;
+  margin: 0.14em;
+  margin-top: 0, 7em;
+}
+
+input[type="checkbox"] {
+  margin: 0.14em;
+  margin-top: 0, 7em;
+}
+
+label {
+  font-size: 20px;
+}
+
+#joinRoomBtn {
+  bottom: 1000px;
+}
+
+a {
+  text-decoration: none;
+  color: #183E8E;
+  font-size: 30px;
+}
+
+#sendBtn {
+  font-size: 30px;
+}
+
+#toSend {
+  font-size: 30px;
+}
+
+p {
+  font-size: 30px;
+  color: #183E8E;
+  text-shadow: 1px 1px 1px white;
+}
