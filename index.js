@@ -27,7 +27,7 @@ io.on('connection', (socket) => {
         socket.join(room.id)
 
         console.log(`Client ${socket.id} joined room with id '${room.id}'`)
-        socket.in(room.id).send(`Client ${socket.id} joined`)
+        socket.in(room.id).emit(`Client ${socket.id} joined`)
         socket.emit('joinedRoom', room.id, room.messages,)
     })
 
